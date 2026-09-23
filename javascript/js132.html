@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="list"></ul>
+
+<script>
+let subjects = ["HTML", "CSS", "JavaScript", "Python"];
+
+subjects.forEach(function(subject) {
+    let li = document.createElement("li");
+
+    li.textContent = subject;
+
+    document.getElementById("list").appendChild(li);
+});
+</script>
+
+</body>
+</html>

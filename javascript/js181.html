@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button ondblclick="countDouble()">Double Click</button>
+
+<p>Double clicks: <span id="count">0</span></p>
+
+<script>
+let count = 0;
+
+function countDouble() {
+    count++;
+    document.getElementById("count").innerHTML = count;
+}
+</script>
+
+</body>
+</html>

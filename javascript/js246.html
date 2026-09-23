@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Without Reload</title>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+
+<form id="myForm">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name == "" || email == "") {
+
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+
+    } else {
+
+        document.getElementById("message").innerHTML =
+            "Form submitted successfully without page reload.";
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application</title>
+</head>
+<body>
+
+<h2>Job Application Form</h2>
+
+<form onsubmit="return validateJob()">
+
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Email:
+    <input type="email" id="email"><br><br>
+
+    Qualification:
+    <input type="text" id="qualification"><br><br>
+
+    Experience:
+    <input type="number" id="experience"><br><br>
+
+    <button type="submit">Apply</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validateJob() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let qualification = document.getElementById("qualification").value;
+    let experience = document.getElementById("experience").value;
+
+    if (name == "" || email == "" ||
+        qualification == "" || experience == "") {
+
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Job application submitted successfully.";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

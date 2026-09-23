@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="button">Click</button>
+
+<script>
+let button = document.getElementById("button");
+
+button.addEventListener("click", function() {
+    alert("First event");
+});
+
+button.addEventListener("click", function() {
+    alert("Second event");
+});
+</script>
+
+</body>
+</html>

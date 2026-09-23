@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input
+onfocus="focusInput()"
+onblur="blurInput()">
+
+<p id="result"></p>
+
+<script>
+function focusInput() {
+    document.getElementById("result").innerHTML =
+        "Input focused";
+}
+
+function blurInput() {
+    document.getElementById("result").innerHTML =
+        "Input lost focus";
+}
+</script>
+
+</body>
+</html>

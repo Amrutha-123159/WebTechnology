@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="select">
+    <option>Select</option>
+</select>
+
+<button onclick="add()">Add Option</button>
+
+<script>
+function add() {
+    let option = document.createElement("option");
+
+    option.textContent = "JavaScript";
+
+    document.getElementById("select").appendChild(option);
+}
+</script>
+
+</body>
+</html>

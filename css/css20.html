@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 20</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(840px, 92vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+      padding: 28px;
+    }
+    h1 { text-align: center; color: #1d4ed8; }
+    .header {
+      background: #1f2937;
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .item {
+      background: #dbeafe;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 20</h1>
+    <div class="header">
+      <h2>Jane Doe</h2>
+      <p>Web Designer</p>
+    </div>
+    <div class="grid">
+      <div class="item">Projects</div>
+      <div class="item">Skills</div>
+      <div class="item">Contact</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 12</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(760px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+      padding: 28px;
+    }
+    h1 { text-align: center; color: #2563eb; }
+    ul { background: #dbeafe; border-radius: 10px; padding: 18px 26px; }
+    table {
+      width: 100%;
+      margin-top: 18px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 12</h1>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <table>
+      <tr><th>Name</th><th>Course</th></tr>
+      <tr><td>Alice</td><td>Web Design</td></tr>
+      <tr><td>Bob</td><td>UI/UX</td></tr>
+    </table>
+  </div>
+</body>
+</html>

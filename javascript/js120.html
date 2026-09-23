@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Currency Converter</h2>
+
+<input type="number" id="amount" placeholder="Amount">
+
+<button onclick="convert()">Convert USD to INR</button>
+
+<p id="result"></p>
+
+<script>
+function convert() {
+    let amount = Number(document.getElementById("amount").value);
+
+    fetch("https://api.frankfurter.app/latest?from=USD&to=INR")
+        .then(response => response.json())
+        .then(data => {
+            let rate = data.rates.INR;
+            let result = amount * rate;
+
+            document.getElementById("result").innerHTML =
+                "INR = ₹" + result.toFixed(2);
+        })
+        .catch(() => {
+            document.getElementById("result").innerHTML =
+                "Unable to connect to API";
+        });
+}
+</script>
+
+</body>
+</html>

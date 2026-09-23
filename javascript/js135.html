@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1" id="table">
+<tr>
+    <th>Name</th>
+</tr>
+</table>
+
+<button onclick="addRow()">Add Row</button>
+
+<script>
+function addRow() {
+    let row = document.getElementById("table").insertRow();
+
+    row.insertCell(0).textContent = "New Student";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Blog</title>
+
+    <style>
+        .news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        article {
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        @media (max-width: 600px) {
+            .news {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Latest News</h1>
+
+    <div class="news">
+
+        <article>
+            <h2>News 1</h2>
+            <p>Latest news information.</p>
+        </article>
+
+        <article>
+            <h2>News 2</h2>
+            <p>Latest technology news.</p>
+        </article>
+
+        <article>
+            <h2>News 3</h2>
+            <p>Latest sports news.</p>
+        </article>
+
+    </div>
+
+</body>
+</html>

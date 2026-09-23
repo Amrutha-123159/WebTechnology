@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input onkeydown="showKey(event)">
+
+<p id="result"></p>
+
+<script>
+function showKey(event) {
+    document.getElementById("result").innerHTML =
+        "You pressed: " + event.key;
+}
+</script>
+
+</body>
+</html>

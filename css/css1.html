@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 1</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+    }
+    .card {
+      width: min(700px, 90vw);
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 18px 40px rgba(30, 41, 59, 0.12);
+      text-align: center;
+    }
+    h1 { color: #1d4ed8; }
+    .box { margin-top: 18px; }
+    .inline { color: #dc2626; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 1</h1>
+    <p>This page demonstrates <span class="inline">inline CSS</span>.</p>
+    <div class="box">
+      <p style="color:#2563eb; font-weight:bold;">This text uses inline styling.</p>
+    </div>
+  </div>
+</body>
+</html>

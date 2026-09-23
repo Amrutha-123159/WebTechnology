@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classes and Objects</title>
+</head>
+<body>
+
+<script>
+
+    class Student {
+
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        display() {
+            document.write(
+                "Name: " + this.name +
+                "<br>Age: " + this.age
+            );
+        }
+    }
+
+    let student1 = new Student("Amrutha", 18);
+
+    student1.display();
+
+</script>
+
+</body>
+</html>

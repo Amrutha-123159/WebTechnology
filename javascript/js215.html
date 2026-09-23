@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date of Birth Validation</title>
+</head>
+<body>
+
+<h2>Date of Birth</h2>
+
+<input type="date" id="dob">
+
+<button onclick="validateDOB()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+function validateDOB() {
+
+    let dob = document.getElementById("dob").value;
+
+    if (dob == "") {
+        document.getElementById("message").innerHTML =
+            "Please select your date of birth.";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Date of birth selected successfully.";
+    }
+}
+</script>
+
+</body>
+</html>

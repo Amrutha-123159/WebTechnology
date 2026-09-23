@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="number" id="age">
+
+<button onclick="validate()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let age = Number(document.getElementById("age").value);
+
+    if (age >= 18 && age <= 100) {
+        document.getElementById("result").innerHTML =
+            "Valid age";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Invalid age";
+    }
+}
+</script>
+
+</body>
+</html>

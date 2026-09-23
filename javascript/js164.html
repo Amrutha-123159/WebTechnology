@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select onchange="changeValue(this)">
+    <option>HTML</option>
+    <option>CSS</option>
+    <option>JavaScript</option>
+</select>
+
+<p id="result"></p>
+
+<script>
+function changeValue(select) {
+    document.getElementById("result").innerHTML =
+        "Selected: " + select.value;
+}
+</script>
+
+</body>
+</html>

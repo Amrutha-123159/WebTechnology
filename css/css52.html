@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Footer</title>
+
+    <style>
+        footer {
+            background-color: black;
+            color: white;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>My Website</h2>
+
+    <footer>
+        <div>About Us</div>
+        <div>Contact</div>
+        <div>Follow Us</div>
+    </footer>
+
+</body>
+</html>

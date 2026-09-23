@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="password" id="password">
+
+<button onclick="validate()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let password =
+        document.getElementById("password").value;
+
+    if (password.length >= 6) {
+        document.getElementById("result").innerHTML =
+            "Valid password";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Password must contain at least 6 characters";
+    }
+}
+</script>
+
+</body>
+</html>

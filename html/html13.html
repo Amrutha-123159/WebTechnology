@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS</title>
+  <style>
+    body {
+      margin: 0;
+      background: #ecfeff;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+        padding: 10px;
+      }
+      .card {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Responsive Webpage</h1>
+      <p>This layout adjusts its size on smaller screens using media queries.</p>
+      <p>Resize the browser to see the layout respond to different screen widths.</p>
+    </div>
+  </div>
+</body>
+</html>

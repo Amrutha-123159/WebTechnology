@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Delegation</title>
+</head>
+<body>
+
+<h2>Click a List Item</h2>
+
+<ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<p id="result"></p>
+
+<script>
+document.getElementById("list").onclick = function(event) {
+
+    if (event.target.tagName == "LI") {
+        document.getElementById("result").innerHTML =
+            "You selected: " + event.target.innerHTML;
+    }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="name" placeholder="Enter name">
+
+<button onclick="validate()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let name = document.getElementById("name").value;
+
+    let pattern = /^[A-Za-z ]+$/;
+
+    if (pattern.test(name)) {
+        document.getElementById("result").innerHTML =
+            "Valid name";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Name must contain only alphabets";
+    }
+}
+</script>
+
+</body>
+</html>

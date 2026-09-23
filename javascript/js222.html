@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Required Field Validation</title>
+</head>
+<body>
+
+<h2>Required Fields</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    Phone:
+    <input type="text" id="phone">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+
+    if (name == "" || email == "" || phone == "") {
+
+        document.getElementById("message").innerHTML =
+            "Please fill all required fields.";
+
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Form submitted successfully.";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

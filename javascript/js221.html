@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Textarea Validation</title>
+</head>
+<body>
+
+<h2>Textarea Validation</h2>
+
+<textarea id="message" rows="5" cols="30"
+placeholder="Enter your message"></textarea>
+
+<br><br>
+
+<button onclick="validateText()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function validateText() {
+
+    let text = document.getElementById("message").value;
+
+    if (text.trim() == "") {
+        document.getElementById("result").innerHTML =
+            "Please enter a message.";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Message submitted successfully.";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 2</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+      font-family: Arial, sans-serif;
+      color: #111827;
+    }
+    .card {
+      width: min(760px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 38px rgba(49, 46, 129, 0.12);
+      padding: 30px;
+    }
+    h1 {
+      margin: 0 0 16px;
+      text-align: center;
+      color: #4f46e5;
+    }
+    .demo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .box {
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      background: #ddd6fe;
+      color: #312e81;
+    }
+    .box:nth-child(2) { background: #bfdbfe; color: #1e3a8a; }
+    .box:nth-child(3) { background: #fecdd3; color: #9f1239; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 2</h1>
+    <p style="text-align:center; margin:0;">This page demonstrates CSS selectors.</p>
+    <div class="demo">
+      <div class="box">Element Selector</div>
+      <div class="box">Class Selector</div>
+      <div class="box">ID Selector</div>
+    </div>
+  </div>
+</body>
+</html>

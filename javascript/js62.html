@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>String Palindrome</h2>
+
+<script>
+let str = "madam";
+let reverse = "";
+
+for (let i = str.length - 1; i >= 0; i--) {
+    reverse = reverse + str[i];
+}
+
+if (str == reverse) {
+    document.write(str + " is a palindrome");
+} else {
+    document.write(str + " is not a palindrome");
+}
+</script>
+
+</body>
+</html>

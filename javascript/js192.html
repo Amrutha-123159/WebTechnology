@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="password" id="password"
+placeholder="Password">
+
+<input type="password" id="confirm"
+placeholder="Confirm Password">
+
+<button onclick="validate()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let p = document.getElementById("password").value;
+    let c = document.getElementById("confirm").value;
+
+    if (p == c) {
+        document.getElementById("result").innerHTML =
+            "Passwords match";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Passwords do not match";
+    }
+}
+</script>
+
+</body>
+</html>

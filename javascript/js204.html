@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object</title>
+</head>
+<body>
+
+<h2>Window Object</h2>
+
+<button onclick="showWindow()">Click Me</button>
+
+<p id="output"></p>
+
+<script>
+function showWindow() {
+
+    document.getElementById("output").innerHTML =
+        "Width: " + window.innerWidth +
+        "<br>Height: " + window.innerHeight;
+}
+</script>
+
+</body>
+</html>

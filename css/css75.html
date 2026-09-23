@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 75</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #ecfeff);
+      color: #0f172a;
+      padding: 24px;
+    }
+    .layout {
+      width: min(1100px, 94vw);
+      background: white;
+      border-radius: 22px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      overflow: hidden;
+    }
+    header {
+      background: #1d4ed8;
+      color: white;
+      padding: 20px 30px;
+      font-weight: 700;
+    }
+    .main {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 500px;
+    }
+    aside {
+      background: #eff6ff;
+      padding: 24px;
+      border-right: 1px solid #dbeafe;
+    }
+    section {
+      padding: 28px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+      border-radius: 14px;
+      padding: 18px;
+    }
+    @media (max-width: 700px) {
+      .main { grid-template-columns: 1fr; }
+      aside { border-right: none; border-bottom: 1px solid #dbeafe; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <header>Complete Responsive Website</header>
+    <div class="main">
+      <aside>
+        <h3>Menu</h3>
+        <p>Home</p>
+        <p>Services</p>
+        <p>Portfolio</p>
+        <p>Contact</p>
+      </aside>
+      <section>
+        <h1 style="margin-top:0; color:#1d4ed8;">CSS Exercise 75</h1>
+        <div class="cards">
+          <div class="card"><strong>Design</strong><br />Responsive UI</div>
+          <div class="card"><strong>Build</strong><br />Grid + Flexbox</div>
+          <div class="card"><strong>Code</strong><br />Clean and modern</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

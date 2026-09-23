@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 39</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(640px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+      padding: 28px;
+      text-align: center;
+    }
+    h1 { color: #1d4ed8; }
+    .menu { position: relative; display: inline-block; }
+    .drop-btn {
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: white;
+      min-width: 180px;
+      box-shadow: 0 8px 18px rgba(15,23,42,.1);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    .menu:hover .dropdown-content { display: block; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 39</h1>
+    <div class="menu">
+      <button class="drop-btn">Dropdown</button>
+      <div class="dropdown-content">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

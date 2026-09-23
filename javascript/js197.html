@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<textarea id="message"
+placeholder="Enter message"></textarea>
+
+<button onclick="validate()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let message =
+        document.getElementById("message").value;
+
+    if (message.trim() == "") {
+        document.getElementById("result").innerHTML =
+            "Textarea cannot be empty";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Message submitted";
+    }
+}
+</script>
+
+</body>
+</html>

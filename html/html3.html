@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; background: #eff6ff; }
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      background: white;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 2px solid #1e3a8a;
+      padding: 12px;
+      text-align: center;
+    }
+    .highlight { background: #dbeafe; }
+  </style>
+</head>
+<body>
+  <h1>Student Information</h1>
+  <table>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th colspan="2">Marks</th>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <th>Science</th>
+    </tr>
+    <tr class="highlight">
+      <td>Alice</td>
+      <td>90</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>85</td>
+      <td>92</td>
+    </tr>
+  </table>
+</body>
+</html>

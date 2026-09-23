@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Order</title>
+</head>
+<body>
+
+<h2>Shopping Order</h2>
+
+Product Price:
+<input type="number" id="price"><br><br>
+
+Quantity:
+<input type="number" id="quantity"><br><br>
+
+<button onclick="calculateTotal()">Calculate Total</button>
+
+<p id="result"></p>
+
+<script>
+function calculateTotal() {
+
+    let price = Number(document.getElementById("price").value);
+    let quantity = Number(document.getElementById("quantity").value);
+
+    let total = price * quantity;
+
+    document.getElementById("result").innerHTML =
+        "Total Price: ₹" + total;
+}
+</script>
+
+</body>
+</html>

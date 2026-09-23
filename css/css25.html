@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 25</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+      color: white;
+      padding: 44px 20px;
+      text-align: center;
+    }
+    h1 { margin: 0 0 10px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 20px;
+    }
+    .item {
+      background: #dbeafe;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 700;
+    }
+    button {
+      background: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Welcome</h1>
+    <p>Build beautiful websites</p>
+    <button>Get Started</button>
+  </header>
+  <section class="grid">
+    <div class="item">Features</div>
+    <div class="item">Plans</div>
+    <div class="item">About</div>
+  </section>
+</body>
+</html>

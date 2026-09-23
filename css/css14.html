@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 14</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(760px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.1);
+      padding: 24px;
+    }
+    h1 { text-align: center; color: #2563eb; }
+    .flex {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #bfdbfe;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 14</h1>
+    <div class="flex">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div>
+  </div>
+</body>
+</html>

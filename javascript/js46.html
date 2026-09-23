@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .login {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        @media (max-width: 500px) {
+            .login {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login">
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username == "" || password == "") {
+        document.getElementById("message").innerHTML =
+            "Please fill all fields";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Login successful";
+    }
+}
+</script>
+
+</body>
+</html>

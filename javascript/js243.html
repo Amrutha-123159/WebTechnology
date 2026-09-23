@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator</title>
+</head>
+<body>
+
+<h2>Employee Salary Calculator</h2>
+
+Basic Salary:
+<input type="number" id="basic"><br><br>
+
+HRA:
+<input type="number" id="hra"><br><br>
+
+DA:
+<input type="number" id="da"><br><br>
+
+<button onclick="calculateSalary()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculateSalary() {
+
+    let basic = Number(document.getElementById("basic").value);
+    let hra = Number(document.getElementById("hra").value);
+    let da = Number(document.getElementById("da").value);
+
+    let total = basic + hra + da;
+
+    document.getElementById("result").innerHTML =
+        "Basic Salary: " + basic +
+        "<br>HRA: " + hra +
+        "<br>DA: " + da +
+        "<br>Total Salary: " + total;
+}
+</script>
+
+</body>
+</html>

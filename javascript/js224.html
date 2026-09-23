@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success Message</title>
+</head>
+<body>
+
+<h2>Registration</h2>
+
+<form onsubmit="return submitForm()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function submitForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name == "" || email == "") {
+
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Registration successful!";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

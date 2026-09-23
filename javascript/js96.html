@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<input type="text" id="name" placeholder="Name">
+<p id="nameError"></p>
+
+<input type="email" id="email" placeholder="Email">
+<p id="emailError"></p>
+
+<input type="password" id="password" placeholder="Password">
+<p id="passwordError"></p>
+
+<button onclick="validate()">Submit</button>
+
+<script>
+function validate() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+
+    if (name == "") {
+        document.getElementById("nameError").innerHTML =
+            "Name is required";
+    }
+
+    if (email == "") {
+        document.getElementById("emailError").innerHTML =
+            "Email is required";
+    }
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").innerHTML =
+            "Password must contain at least 6 characters";
+    }
+}
+</script>
+
+</body>
+</html>

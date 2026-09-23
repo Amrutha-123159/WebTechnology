@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Typing Test</h2>
+
+<p id="sentence">
+JavaScript is easy to learn
+</p>
+
+<input id="input" oninput="check()">
+
+<p id="result"></p>
+
+<script>
+function check() {
+
+    let correct =
+        document.getElementById("sentence").textContent;
+
+    let typed =
+        document.getElementById("input").value;
+
+    if (typed == correct) {
+        document.getElementById("result").innerHTML =
+            "Correct!";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Keep typing...";
+    }
+}
+</script>
+
+</body>
+</html>

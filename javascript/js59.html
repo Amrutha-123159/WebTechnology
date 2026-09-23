@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Frequency</h2>
+
+<script>
+let arr = [1, 2, 2, 3, 3, 3];
+
+let frequency = {};
+
+for (let i = 0; i < arr.length; i++) {
+    if (frequency[arr[i]]) {
+        frequency[arr[i]]++;
+    } else {
+        frequency[arr[i]] = 1;
+    }
+}
+
+for (let value in frequency) {
+    document.write(value + " = " + frequency[value] + "<br>");
+}
+</script>
+
+</body>
+</html>

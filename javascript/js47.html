@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Webpage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        header {
+            background: lightblue;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        .box {
+            padding: 30px;
+            margin: 20px;
+            background: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Interactive Website</h1>
+</header>
+
+<div class="box">
+    <h2 id="heading">Welcome!</h2>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="showMessage()">Click Me</button>
+</div>
+
+<script>
+function changeText() {
+    document.getElementById("heading").innerHTML =
+        "Welcome to JavaScript!";
+}
+
+function changeColor() {
+    document.body.style.backgroundColor = "lightyellow";
+}
+
+function showMessage() {
+    alert("Button clicked!");
+}
+</script>
+
+</body>
+</html>

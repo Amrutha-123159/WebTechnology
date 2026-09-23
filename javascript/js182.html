@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Reaction Time Game</h2>
+
+<button id="button" onclick="clickButton()">Wait...</button>
+
+<p id="result"></p>
+
+<script>
+let startTime;
+
+setTimeout(function() {
+    document.getElementById("button").innerHTML = "CLICK!";
+    startTime = Date.now();
+}, 3000);
+
+function clickButton() {
+
+    if (!startTime) {
+        document.getElementById("result").innerHTML =
+            "Wait for CLICK!";
+        return;
+    }
+
+    let reaction = Date.now() - startTime;
+
+    document.getElementById("result").innerHTML =
+        "Reaction time: " + reaction + " ms";
+}
+</script>
+
+</body>
+</html>

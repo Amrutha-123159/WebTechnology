@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Control</title>
+
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background: blue;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Use Arrow Keys</h2>
+
+<div id="box"></div>
+
+<script>
+let box = document.getElementById("box");
+let position = 0;
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key == "ArrowRight") {
+        position += 10;
+        box.style.left = position + "px";
+    }
+
+    if (event.key == "ArrowLeft") {
+        position -= 10;
+        box.style.left = position + "px";
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="submitForm(event)">
+
+<input type="text">
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function submitForm(event) {
+    event.preventDefault();
+
+    document.getElementById("result").innerHTML =
+        "Form submitted";
+}
+</script>
+
+</body>
+</html>

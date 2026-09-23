@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="parent">
+    Parent
+    <button id="child">Child</button>
+</div>
+
+<script>
+document.getElementById("parent").onclick = function() {
+    alert("Parent clicked");
+};
+
+document.getElementById("child").onclick = function(event) {
+    alert("Child clicked");
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 35</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(760px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+      padding: 30px;
+    }
+    h1 { text-align: center; color: #2563eb; }
+    .overflow-demo {
+      height: 120px;
+      overflow: auto;
+      background: #dbeafe;
+      border: 2px solid #93c5fd;
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 35</h1>
+    <div class="overflow-demo">
+      This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph. This is a long paragraph.
+    </div>
+  </div>
+</body>
+</html>

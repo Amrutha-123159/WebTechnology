@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation</title>
+</head>
+<body>
+
+<h2>Browser Geolocation</h2>
+
+<button onclick="getLocation()">Get Location</button>
+
+<p id="result"></p>
+
+<script>
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+
+                document.getElementById("result").innerHTML =
+                    "Location detected successfully.";
+            },
+            function() {
+
+                document.getElementById("result").innerHTML =
+                    "Unable to get location.";
+            }
+        );
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+            "Geolocation is not supported.";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="course">
+    <option value="">Select Course</option>
+    <option>BCA</option>
+    <option>B.Tech</option>
+    <option>B.Sc</option>
+</select>
+
+<button onclick="validate()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let course = document.getElementById("course").value;
+
+    if (course == "") {
+        document.getElementById("result").innerHTML =
+            "Please select a course";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Selected: " + course;
+    }
+}
+</script>
+
+</body>
+</html>

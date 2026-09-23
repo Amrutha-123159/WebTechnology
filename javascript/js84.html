@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events</title>
+</head>
+<body>
+
+<h2>Keyboard Event</h2>
+
+<input type="text" id="input">
+
+<p id="result"></p>
+
+<script>
+document.getElementById("input").onkeyup = function() {
+    document.getElementById("result").innerHTML =
+        "You typed: " + this.value;
+};
+</script>
+
+</body>
+</html>

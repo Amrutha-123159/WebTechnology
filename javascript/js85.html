@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events</title>
+</head>
+<body>
+
+<h2>Form Events</h2>
+
+<form onsubmit="submitForm(event)">
+
+    <input type="text" id="name"
+           onfocus="focusInput()"
+           onblur="blurInput()"
+           onchange="changeInput()">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function focusInput() {
+    document.getElementById("result").innerHTML =
+        "Input is focused";
+}
+
+function blurInput() {
+    document.getElementById("result").innerHTML =
+        "Input lost focus";
+}
+
+function changeInput() {
+    document.getElementById("result").innerHTML =
+        "Input changed";
+}
+
+function submitForm(event) {
+    event.preventDefault();
+
+    document.getElementById("result").innerHTML =
+        "Form submitted";
+}
+</script>
+
+</body>
+</html>

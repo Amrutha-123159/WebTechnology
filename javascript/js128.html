@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="old">Old Element</div>
+
+<button onclick="replace()">Replace</button>
+
+<script>
+function replace() {
+    let oldElement = document.getElementById("old");
+
+    let newElement = document.createElement("h2");
+    newElement.textContent = "New Element";
+
+    oldElement.parentNode.replaceChild(newElement, oldElement);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 28</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #ecfeff;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(750px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 20px 30px rgba(8, 145, 178, 0.12);
+      padding: 28px;
+    }
+    h1 { text-align: center; color: #0f766e; }
+    .parent p { color: #059669; font-weight: 700; }
+    .parent > span { color: #dc2626; font-weight: 700; }
+    .sibling + .sibling2 { color: #7c3aed; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 28</h1>
+    <div class="parent">
+      <p>Descendant selector</p>
+      <span>Child selector</span>
+    </div>
+    <div class="sibling">Adjacent sibling</div>
+    <div class="sibling2">General sibling</div>
+  </div>
+</body>
+</html>

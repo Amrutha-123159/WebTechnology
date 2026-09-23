@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling</title>
+</head>
+<body>
+
+<div id="parent" style="padding:30px; background:lightblue;">
+    Parent
+    <button id="child">Child Button</button>
+</div>
+
+<p id="result"></p>
+
+<script>
+document.getElementById("parent").onclick = function() {
+    document.getElementById("result").innerHTML +=
+        "Parent event<br>";
+};
+
+document.getElementById("child").onclick = function(event) {
+    document.getElementById("result").innerHTML +=
+        "Child event<br>";
+};
+</script>
+
+</body>
+</html>

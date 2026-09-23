@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 31</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(780px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 30px rgba(15, 23, 42, 0.1);
+      padding: 28px;
+    }
+    h1 { text-align: center; color: #2563eb; }
+    .demo {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
+    }
+    .linear, .radial {
+      width: 230px;
+      height: 120px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 700;
+      border-radius: 12px;
+    }
+    .linear { background: linear-gradient(135deg, #2563eb, #7c3aed); }
+    .radial { background: radial-gradient(circle, #facc15, #f97316 50%, #7c2d12); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 31</h1>
+    <div class="demo">
+      <div class="linear">Linear Gradient</div>
+      <div class="radial">Radial Gradient</div>
+    </div>
+  </div>
+</body>
+</html>

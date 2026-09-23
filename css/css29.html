@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 29</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --accent: #22c55e;
+      --light: #dbeafe;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(700px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 30px rgba(37, 99, 235, 0.12);
+      padding: 32px;
+    }
+    h1 { text-align: center; color: var(--primary); }
+    .box {
+      margin-top: 18px;
+      background: var(--light);
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 29</h1>
+    <div class="box">CSS Variables Demo</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+      color: #111827;
+    }
+    .hero {
+      background: #0f172a;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; }
+    .section {
+      padding: 50px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>John Doe</h1>
+    <p>Web Developer | Designer | Learner</p>
+    <button class="primary-btn">Hire Me</button>
+  </header>
+
+  <section class="section container">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer who enjoys creating modern and responsive websites using HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <section class="section container">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="item"><h3>HTML</h3><p>Semantic structure and accessibility.</p></div>
+      <div class="item"><h3>CSS</h3><p>Responsive layouts and styling.</p></div>
+      <div class="item"><h3>JavaScript</h3><p>Interactive user experience.</p></div>
+    </div>
+  </section>
+
+  <footer class="container" style="padding: 20px 0 40px; text-align: center;">
+    <p>&copy; 2026 John Doe</p>
+  </footer>
+</body>
+</html>

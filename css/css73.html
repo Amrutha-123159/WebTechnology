@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode</title>
+
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #222;
+                --text-color: white;
+            }
+        }
+
+        .box {
+            padding: 30px;
+            margin: 20px;
+            border: 2px solid var(--text-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dark Mode Website</h1>
+
+    <div class="box">
+        <h2>Welcome</h2>
+        <p>This webpage supports dark mode.</p>
+    </div>
+
+</body>
+</html>

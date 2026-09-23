@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 8</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #fff7ed;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(760px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 30px rgba(251, 146, 60, 0.12);
+      padding: 26px;
+    }
+    h1 { color: #f97316; text-align: center; }
+    .float-box {
+      overflow: hidden;
+      border: 2px solid #fdba74;
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .left, .right {
+      width: 140px;
+      height: 90px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      background: #fed7aa;
+      color: #9a4d00;
+      margin: 10px;
+    }
+    .left { float: left; }
+    .right { float: right; }
+    .clear { clear: both; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 8</h1>
+    <div class="float-box">
+      <div class="left">Float Left</div>
+      <div class="right">Float Right</div>
+      <p class="clear">This paragraph clears the floats.</p>
+    </div>
+  </div>
+</body>
+</html>

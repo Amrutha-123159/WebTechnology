@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update localStorage</title>
+</head>
+<body>
+
+<h2>Update Username</h2>
+
+<input type="text" id="username" placeholder="Enter new username">
+
+<button onclick="updateUsername()">Update</button>
+
+<p id="result"></p>
+
+<script>
+function updateUsername() {
+
+    let username = document.getElementById("username").value;
+
+    localStorage.setItem("username", username);
+
+    document.getElementById("result").innerHTML =
+        "Username updated to: " + username;
+}
+</script>
+
+</body>
+</html>

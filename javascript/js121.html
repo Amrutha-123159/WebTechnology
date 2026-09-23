@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background: lightblue;
+            padding: 30px;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <p>Student | Web Developer</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>I am learning HTML, CSS and JavaScript.</p>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <button onclick="showProject('Portfolio Website')">
+        Portfolio
+    </button>
+
+    <button onclick="showProject('Calculator')">
+        Calculator
+    </button>
+
+    <p id="result"></p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+
+    <input type="email" id="email" placeholder="Enter email">
+    <button onclick="contact()">Submit</button>
+
+    <p id="message"></p>
+</section>
+
+<script>
+function showProject(project) {
+    document.getElementById("result").innerHTML =
+        "You selected: " + project;
+}
+
+function contact() {
+    let email = document.getElementById("email").value;
+
+    if (email == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter email";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Thank you!";
+    }
+}
+</script>
+
+</body>
+</html>

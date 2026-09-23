@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Weather Application</h2>
+
+<input type="text" id="city" placeholder="Enter city">
+
+<button onclick="getWeather()">Get Weather</button>
+
+<p id="result"></p>
+
+<script>
+function getWeather() {
+
+    let city = document.getElementById("city").value;
+
+    let url =
+        "https://api.open-meteo.com/v1/forecast" +
+        "?latitude=13.08&longitude=80.27&current_weather=true";
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+
+            document.getElementById("result").innerHTML =
+                "City: " + city + "<br>" +
+                "Temperature: " +
+                data.current_weather.temperature + " °C";
+        })
+        .catch(error => {
+
+            document.getElementById("result").innerHTML =
+                "Unable to get weather";
+        });
+}
+</script>
+
+</body>
+</html>

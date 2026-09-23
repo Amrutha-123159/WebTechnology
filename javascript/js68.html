@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Elements</title>
+</head>
+<body>
+
+<h2>Add Element Dynamically</h2>
+
+<button onclick="addElement()">Add Paragraph</button>
+
+<div id="container"></div>
+
+<script>
+function addElement() {
+    let p = document.createElement("p");
+
+    p.innerHTML = "New paragraph added!";
+    
+    document.getElementById("container").appendChild(p);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Notes Application</h2>
+
+<textarea id="note" placeholder="Write your note"></textarea>
+<br>
+
+<button onclick="saveNote()">Save</button>
+<button onclick="showNote()">Show</button>
+
+<p id="result"></p>
+
+<script>
+function saveNote() {
+    let note = document.getElementById("note").value;
+
+    localStorage.setItem("note", note);
+
+    alert("Note saved");
+}
+
+function showNote() {
+    let note = localStorage.getItem("note");
+
+    document.getElementById("result").innerHTML = note;
+}
+</script>
+
+</body>
+</html>

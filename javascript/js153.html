@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="box">
+    <p id="old">Old Element</p>
+</div>
+
+<button onclick="create()">Create</button>
+<button onclick="removeElement()">Remove</button>
+<button onclick="replace()">Replace</button>
+
+<script>
+function create() {
+    let p = document.createElement("p");
+
+    p.id = "new";
+    p.textContent = "New Element";
+
+    document.getElementById("box").appendChild(p);
+}
+
+function removeElement() {
+    let element = document.getElementById("old");
+
+    if (element) {
+        element.remove();
+    }
+}
+
+function replace() {
+    let oldElement = document.getElementById("old");
+
+    if (oldElement) {
+        let newElement = document.createElement("h2");
+
+        newElement.textContent = "Replaced Element";
+
+        oldElement.parentNode.replaceChild(
+            newElement,
+            oldElement
+        );
+    }
+}
+</script>
+
+</body>
+</html>

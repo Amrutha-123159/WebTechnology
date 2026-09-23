@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="checkbox" id="terms">
+I agree to the terms
+
+<button onclick="validate()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    if (document.getElementById("terms").checked) {
+        document.getElementById("result").innerHTML =
+            "Checkbox selected";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Please accept the terms";
+    }
+}
+</script>
+
+</body>
+</html>

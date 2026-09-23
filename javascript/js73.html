@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Selector</title>
+</head>
+<body>
+
+<h2 id="title">Hello</h2>
+
+<p class="text">One</p>
+<p class="text">Two</p>
+
+<button onclick="changeText()">Change</button>
+
+<script>
+function changeText() {
+    document.querySelector("#title").innerHTML = "Changed Title";
+
+    let items = document.querySelectorAll(".text");
+
+    items.forEach(function(item) {
+        item.style.color = "green";
+    });
+}
+</script>
+
+</body>
+</html>

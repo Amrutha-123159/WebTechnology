@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form onsubmit="return contactForm()">
+
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Email:
+    <input type="email" id="email"><br><br>
+
+    Message:
+    <textarea id="message"></textarea><br><br>
+
+    <button type="submit">Send</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function contactForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (name == "" || email == "" || message == "") {
+
+        document.getElementById("result").innerHTML =
+            "Please fill all fields.";
+
+        return false;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Message sent successfully.";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

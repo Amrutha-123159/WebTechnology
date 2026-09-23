@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 7</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f0fdf4;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(760px, 90vw);
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 18px 30px rgba(16, 185, 129, 0.12);
+      padding: 30px;
+    }
+    h1 { text-align: center; color: #059669; }
+    .demo {
+      position: relative;
+      height: 240px;
+      border: 2px dashed #34d399;
+      border-radius: 12px;
+      margin-top: 18px;
+      background: #ecfdf5;
+    }
+    .box {
+      position: absolute;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    .static { left: 20px; top: 20px; background: #d1fae5; }
+    .relative { left: 160px; top: 30px; position: relative; background: #a7f3d0; }
+    .absolute { right: 24px; top: 28px; background: #bbf7d0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 7</h1>
+    <div class="demo">
+      <div class="box static">Static</div>
+      <div class="box relative">Relative</div>
+      <div class="box absolute">Absolute</div>
+    </div>
+  </div>
+</body>
+</html>

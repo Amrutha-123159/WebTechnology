@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dependent Dropdown</title>
+</head>
+<body>
+
+<h2>Country → State → City</h2>
+
+<select id="country" onchange="loadStates()">
+    <option value="">Select Country</option>
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+</select>
+
+<select id="state" onchange="loadCities()">
+    <option value="">Select State</option>
+</select>
+
+<select id="city">
+    <option value="">Select City</option>
+</select>
+
+<script>
+function loadStates() {
+    let country = document.getElementById("country").value;
+    let state = document.getElementById("state");
+
+    state.innerHTML = "";
+
+    if (country == "india") {
+        state.innerHTML =
+            "<option>Andhra Pradesh</option>" +
+            "<option>Tamil Nadu</option>";
+    }
+
+    if (country == "usa") {
+        state.innerHTML =
+            "<option>California</option>" +
+            "<option>Texas</option>";
+    }
+}
+
+function loadCities() {
+    let state = document.getElementById("state").value;
+    let city = document.getElementById("city");
+
+    city.innerHTML = "";
+
+    if (state == "Tamil Nadu") {
+        city.innerHTML =
+            "<option>Chennai</option>" +
+            "<option>Madurai</option>";
+    } else if (state == "Andhra Pradesh") {
+        city.innerHTML =
+            "<option>Vijayawada</option>" +
+            "<option>Visakhapatnam</option>";
+    } else if (state == "California") {
+        city.innerHTML =
+            "<option>Los Angeles</option>" +
+            "<option>San Francisco</option>";
+    } else {
+        city.innerHTML = "<option>Houston</option>";
+    }
+}
+</script>
+
+</body>
+</html>

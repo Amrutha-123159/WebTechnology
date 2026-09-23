@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inheritance</title>
+</head>
+<body>
+
+<h2>JavaScript Inheritance</h2>
+
+<p id="result"></p>
+
+<script>
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        return this.name + " is eating";
+    }
+}
+
+class Dog extends Animal {
+    bark() {
+        return this.name + " is barking";
+    }
+}
+
+let dog = new Dog("Tommy");
+
+document.getElementById("result").innerHTML =
+    dog.eat() + "<br>" + dog.bark();
+</script>
+
+</body>
+</html>

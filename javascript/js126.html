@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="add()">Add Element</button>
+
+<div id="container"></div>
+
+<script>
+function add() {
+    let p = document.createElement("p");
+
+    p.textContent = "New paragraph";
+
+    document.getElementById("container").appendChild(p);
+}
+</script>
+
+</body>
+</html>

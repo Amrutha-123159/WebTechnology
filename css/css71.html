@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode</title>
+
+    <style>
+        :root {
+            --background: white;
+            --text: black;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            text-align: center;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #222;
+                --text: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dark Mode Website</h1>
+
+    <p>The colors change according to your system theme.</p>
+
+</body>
+</html>

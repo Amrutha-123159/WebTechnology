@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+
+    Name:
+    <input type="text" id="name">
+    <span id="nameError"></span>
+    <br><br>
+
+    Email:
+    <input type="text" id="email">
+    <span id="emailError"></span>
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <span id="passwordError"></span>
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+
+    if (name == "") {
+        document.getElementById("nameError").innerHTML =
+            " Name is required.";
+    }
+
+    if (email == "") {
+        document.getElementById("emailError").innerHTML =
+            " Email is required.";
+    }
+
+    if (password == "") {
+        document.getElementById("passwordError").innerHTML =
+            " Password is required.";
+    }
+
+    if (name != "" && email != "" && password != "") {
+        alert("Form submitted successfully!");
+    }
+});
+</script>
+
+</body>
+</html>

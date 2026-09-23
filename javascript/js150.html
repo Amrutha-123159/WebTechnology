@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="date"></h2>
+
+<script>
+function showTime() {
+    let now = new Date();
+
+    document.getElementById("date").innerHTML =
+        now.toLocaleString();
+}
+
+setInterval(showTime, 1000);
+
+showTime();
+</script>
+
+</body>
+</html>

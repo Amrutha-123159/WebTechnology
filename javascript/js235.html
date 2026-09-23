@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission</title>
+</head>
+<body>
+
+<h2>College Admission Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Age:
+    <input type="number" id="age"><br><br>
+
+    Email:
+    <input type="email" id="email"><br><br>
+
+    Phone:
+    <input type="text" id="phone"><br><br>
+
+    Course:
+    <select id="course">
+        <option value="">Select Course</option>
+        <option>BCA</option>
+        <option>BSc</option>
+        <option>BTech</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Apply</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let course = document.getElementById("course").value;
+
+    if (name == "" || age == "" || email == "" ||
+        phone == "" || course == "") {
+
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+
+        return false;
+    }
+
+    if (phone.length != 10) {
+        document.getElementById("message").innerHTML =
+            "Enter a valid 10 digit phone number.";
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Admission form submitted successfully.";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="email" placeholder="Enter email">
+
+<button onclick="validate()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let email = document.getElementById("email").value;
+
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (pattern.test(email)) {
+        document.getElementById("result").innerHTML =
+            "Valid email";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Invalid email";
+    }
+}
+</script>
+
+</body>
+</html>

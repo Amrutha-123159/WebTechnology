@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.highlight {
+    color: white;
+    background: blue;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h2 id="text">Hello</h2>
+
+<button onclick="add()">Add</button>
+<button onclick="remove()">Remove</button>
+
+<script>
+function add() {
+    document.getElementById("text").classList.add("highlight");
+}
+
+function remove() {
+    document.getElementById("text").classList.remove("highlight");
+}
+</script>
+
+</body>
+</html>

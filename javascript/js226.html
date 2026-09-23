@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regex Validation</title>
+</head>
+<body>
+
+<h2>Regular Expression Validation</h2>
+
+<input type="text" id="name" placeholder="Enter name">
+
+<button onclick="validateName()">Validate</button>
+
+<p id="message"></p>
+
+<script>
+function validateName() {
+
+    let name = document.getElementById("name").value;
+
+    let pattern = /^[A-Za-z ]+$/;
+
+    if (pattern.test(name)) {
+        document.getElementById("message").innerHTML =
+            "Valid name.";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Only alphabets are allowed.";
+    }
+}
+</script>
+
+</body>
+</html>

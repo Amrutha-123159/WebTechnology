@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Signup</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Login and Signup</h2>
+
+    <div class="container">
+
+        <form>
+            <h3>Login</h3>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+
+        <form>
+            <h3>Signup</h3>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Signup</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

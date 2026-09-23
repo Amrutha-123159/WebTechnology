@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="box"
+draggable="true"
+style="width:100px;height:100px;background:lightblue">
+
+Drag Me
+
+</div>
+
+<div id="drop"
+style="width:200px;height:150px;border:2px solid black">
+
+Drop Here
+
+</div>
+
+<script>
+let box = document.getElementById("box");
+let drop = document.getElementById("drop");
+
+box.ondragstart = function(event) {
+    event.dataTransfer.setData("text", "box");
+};
+
+drop.ondragover = function(event) {
+    event.preventDefault();
+};
+
+drop.ondrop = function(event) {
+    event.preventDefault();
+    drop.appendChild(box);
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return validate()">
+
+<input id="name" placeholder="Name">
+<br><br>
+
+<input id="email" placeholder="Email">
+<br><br>
+
+<input id="phone" placeholder="Phone">
+<br><br>
+
+<textarea id="message" placeholder="Message"></textarea>
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let fields = [
+        document.getElementById("name").value,
+        document.getElementById("email").value,
+        document.getElementById("phone").value,
+        document.getElementById("message").value
+    ];
+
+    for (let i = 0; i < fields.length; i++) {
+
+        if (fields[i].trim() == "") {
+            document.getElementById("result").innerHTML =
+                "Please fill all required fields";
+
+            return false;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Form submitted successfully";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

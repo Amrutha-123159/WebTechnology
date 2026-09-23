@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="gallery"></div>
+
+<script>
+let images = [
+    "https://via.placeholder.com/150?text=Image+1",
+    "https://via.placeholder.com/150?text=Image+2",
+    "https://via.placeholder.com/150?text=Image+3"
+];
+
+images.forEach(function(src) {
+    let image = document.createElement("img");
+
+    image.src = src;
+    image.width = 150;
+
+    document.getElementById("gallery").appendChild(image);
+});
+</script>
+
+</body>
+</html>

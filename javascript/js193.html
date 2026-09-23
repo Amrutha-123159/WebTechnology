@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="date" id="dob">
+
+<button onclick="validate()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+
+    let dob = document.getElementById("dob").value;
+
+    if (dob == "") {
+        document.getElementById("result").innerHTML =
+            "Please select date of birth";
+    } else {
+        document.getElementById("result").innerHTML =
+            "Date of birth selected";
+    }
+}
+</script>
+
+</body>
+</html>

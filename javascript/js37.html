@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spread and Rest</title>
+</head>
+<body>
+
+<script>
+
+    let numbers1 = [1, 2, 3];
+
+    let numbers2 = [...numbers1, 4, 5];
+
+    document.write("Spread: " + numbers2 + "<br>");
+
+    function add(...numbers) {
+
+        let sum = 0;
+
+        for (let num of numbers) {
+            sum += num;
+        }
+
+        return sum;
+    }
+
+    document.write("Rest Result = " + add(10, 20, 30));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div
+onmousemove="track(event)"
+style="height:200px;border:1px solid black">
+
+Move mouse here
+
+</div>
+
+<p id="result"></p>
+
+<script>
+function track(event) {
+    document.getElementById("result").innerHTML =
+        "X = " + event.clientX +
+        ", Y = " + event.clientY;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+</head>
+<body>
+
+<h2>College Admission Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Age:
+    <input type="number" id="age"><br><br>
+
+    Email:
+    <input type="email" id="email"><br><br>
+
+    Course:
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="BCA">BCA</option>
+        <option value="BSc">B.Sc</option>
+        <option value="BTech">B.Tech</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Apply</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+    let course = document.getElementById("course").value;
+
+    if (name == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter your name.";
+        return false;
+    }
+
+    if (age == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter your age.";
+        return false;
+    }
+
+    if (email == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter your email.";
+        return false;
+    }
+
+    if (course == "") {
+        document.getElementById("message").innerHTML =
+            "Please select a course.";
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Admission form submitted successfully!";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

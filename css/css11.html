@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Exercise 11</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f5f3ff;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: min(780px, 90vw);
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 16px 30px rgba(109, 40, 217, 0.12);
+      padding: 30px;
+    }
+    h1 { text-align: center; color: #6d28d9; }
+    .quote::before { content: '“'; font-size: 2rem; color: #7c3aed; }
+    .quote::after { content: '”'; font-size: 2rem; color: #7c3aed; }
+    .quote::first-letter { font-size: 2rem; font-weight: 700; color: #4f46e5; }
+    .quote::first-line { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Exercise 11</h1>
+    <p class="quote">This paragraph demonstrates ::before, ::after, ::first-letter, and ::first-line pseudo-elements.</p>
+  </div>
+</body>
+</html>

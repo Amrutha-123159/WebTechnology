@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prevent Form Submission</title>
+</head>
+<body>
+
+<h2>Form Validation</h2>
+
+<form id="myForm">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+    let name = document.getElementById("name").value;
+
+    if (name == "") {
+
+        event.preventDefault();
+
+        document.getElementById("message").innerHTML =
+            "Submission prevented. Enter your name.";
+
+    } else {
+
+        event.preventDefault();
+
+        document.getElementById("message").innerHTML =
+            "Form submitted successfully.";
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Application</title>
+</head>
+<body>
+
+<h2>JavaScript Quiz</h2>
+
+<p>What is the correct file extension for JavaScript?</p>
+
+<button onclick="checkAnswer('html')">.html</button>
+<button onclick="checkAnswer('js')">.js</button>
+<button onclick="checkAnswer('css')">.css</button>
+
+<h3 id="result"></h3>
+
+<script>
+    function checkAnswer(answer) {
+
+        if (answer == "js") {
+            document.getElementById("result").innerHTML =
+                "Correct Answer!";
+        } else {
+            document.getElementById("result").innerHTML =
+                "Wrong Answer!";
+        }
+    }
+</script>
+
+</body>
+</html>

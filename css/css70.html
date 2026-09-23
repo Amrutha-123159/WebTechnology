@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Modal</title>
+
+    <style>
+        .modal {
+            display: none;
+        }
+
+        #open:checked ~ .modal {
+            display: block;
+            position: fixed;
+            top: 30%;
+            left: 30%;
+            background-color: white;
+            padding: 30px;
+            border: 2px solid black;
+        }
+
+        label {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="open" hidden>
+
+    <label for="open">Open Popup</label>
+
+    <div class="modal">
+        <h2>Hello!</h2>
+        <p>This is a CSS-only popup.</p>
+        <label for="open">Close</label>
+    </div>
+
+</body>
+</html>

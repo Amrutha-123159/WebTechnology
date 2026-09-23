@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="country" onchange="states()">
+    <option value="">Country</option>
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+</select>
+
+<select id="state" onchange="cities()">
+    <option value="">State</option>
+</select>
+
+<select id="city">
+    <option>City</option>
+</select>
+
+<script>
+function states() {
+    let country = document.getElementById("country").value;
+    let state = document.getElementById("state");
+
+    state.innerHTML = "<option>State</option>";
+
+    if (country == "india") {
+        state.innerHTML +=
+            "<option>Tamil Nadu</option>" +
+            "<option>Kerala</option>";
+    }
+
+    if (country == "usa") {
+        state.innerHTML +=
+            "<option>Texas</option>" +
+            "<option>California</option>";
+    }
+}
+
+function cities() {
+    let state = document.getElementById("state").value;
+    let city = document.getElementById("city");
+
+    if (state == "Tamil Nadu")
+        city.innerHTML = "<option>Chennai</option>";
+    else if (state == "Kerala")
+        city.innerHTML = "<option>Kochi</option>";
+    else if (state == "Texas")
+        city.innerHTML = "<option>Dallas</option>";
+    else
+        city.innerHTML = "<option>Los Angeles</option>";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="task" placeholder="Enter task">
+<button onclick="add()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+function add() {
+    let value = document.getElementById("task").value;
+
+    if (value == "") return;
+
+    let li = document.createElement("li");
+
+    li.innerHTML =
+        value +
+        ' <button onclick="edit(this)">Edit</button>' +
+        ' <button onclick="deleteItem(this)">Delete</button>';
+
+    document.getElementById("list").appendChild(li);
+
+    document.getElementById("task").value = "";
+}
+
+function edit(button) {
+    let li = button.parentElement;
+    let value = prompt("Enter new task");
+
+    if (value != null && value != "") {
+        li.firstChild.textContent = value + " ";
+    }
+}
+
+function deleteItem(button) {
+    button.parentElement.remove();
+}
+</script>
+
+</body>
+</html>

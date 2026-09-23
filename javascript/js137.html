@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1">
+<tr>
+    <td id="name">Amrutha</td>
+    <td><button onclick="edit()">Edit</button></td>
+</tr>
+</table>
+
+<script>
+function edit() {
+    let value = prompt("Enter new name");
+
+    if (value != null && value != "") {
+        document.getElementById("name").textContent = value;
+    }
+}
+</script>
+
+</body>
+</html>

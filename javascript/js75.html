@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table</title>
+</head>
+<body>
+
+<h2>Dynamic Table</h2>
+
+<table border="1" id="table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+</table>
+
+<button onclick="addRow()">Add Row</button>
+
+<script>
+function addRow() {
+    let table = document.getElementById("table");
+
+    let row = table.insertRow();
+
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+
+    cell1.innerHTML = "Amrutha";
+    cell2.innerHTML = "18";
+}
+</script>
+
+</body>
+</html>
